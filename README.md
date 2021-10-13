@@ -88,12 +88,13 @@ yourinitbutton.setOnClickListener(new View.OnClickListener() {
 + To set Document type while using database verification using ID number use `ImageHelperOptions.Builder.setDocNumberType(DocumentType docType, Boolean param2)` where pass `true` as `param2` to enable strict mode on database verification using ID number.
 + We support `DocumentType.PAN`, `DocumentType.DRIVING_LICENSE`, `DocumentType.VOTER_ID` and `DocumentType.RC` for official database verification.
 + To enable or disable image from gallery option use `ImageHelperOptions.Builder.setGalleryOption()`. Use one of the following `ImageHelperOptions.GalleryOption.ALLOW_IN_DOC_ONLY`, `ImageHelperOptions.GalleryOption.ALLOW_IN_SELFIE_ONLY` to enable or disable in either of the screens. If you want to enable in all the screens then use `ImageHelperOptions.GalleryOption.ALLOW`, by default it is enabled in all screens.
-+ To enable synchronous liveness detection in selfies use `ImageHelperOptions.Builder.enableLiveness(Boolean param1, Boolean param2)` where pass `true` as `param1` to enable asynchronous liveness and pass `true` as `param2` to enable strict mode on liveness. Default is false for both `param1` and `param2`.
-+ To enable synchronous database verification in ID images use `ImageHelperOptions.Builder.enableDatabaseVerification(Boolean param1, Boolean param2)` where pass `true` as `param1` to enable asynchronous database verification and pass `true` as `param2` to enable strict mode on database verification. Default is false for both `param1` and `param2`.
++ To enable liveness detection in selfies use `ImageHelperOptions.Builder.enableLiveness(Boolean param1, Boolean param2)` where pass `true` as `param1` to enable asynchronous liveness and pass `true` as `param2` to enable strict mode on liveness. Default is false for both `param1` and `param2`.
++ To enable liveness detection in document use `ImageHelperOptions.Builder.enableCardLiveness(Boolean param1, Boolean param2)` where pass `true` as `param1` to enable asynchronous liveness and pass `true` as `param2` to enable strict mode on liveness. Default is false for both `param1` and `param2`.
++ To enable database verification in ID images use `ImageHelperOptions.Builder.enableDatabaseVerification(Boolean param1, Boolean param2)` where pass `true` as `param1` to enable asynchronous database verification and pass `true` as `param2` to enable strict mode on database verification. Default is false for both `param1` and `param2`.
 + To enable face match between selfie and ID card image make sure to use one of these photo options in `ImageHelperOptions.Builder.setPhotoOptions()`
     - `ImageHelperOptions.PhotoOptions.SELFIE_WITH_DOC_PHOTO` or 
     - `ImageHelperOptions.PhotoOptions.SELFIE_WITH_DOC_PHOTO_AND_DOC_NUMBER`, 
-    - then to enable synchronous face match use `ImageHelperOptions.Builder.enableFaceMatch(Boolean param)` where pass `true` as `param` to enable asynchronous face match. Default value of `param` is `false`.
+    - then to enable face match use `ImageHelperOptions.Builder.enableFaceMatch(Boolean param)` where pass `true` as `param` to enable asynchronous face match. Default value of `param` is `false`.
 
 ## Authorization
 
@@ -105,6 +106,8 @@ To Obtain your organisation's authkey, contact us at hello@invoid.co
 - Liveness result `imageHelperResult.getSelfieResult().getSelfieResult().getLivenessResult()`
 - Document front image file path `imageHelperResult.getDocumentResult().getDocFrontPath()`
 - Document back image file path `imageHelperResult.getDocumentResult().getDocBackPath()`
+- Document front liveness response `imageHelperResult.getDocumentResult().getDocFrontLivenessResponse()`
+- Document back liveness response `imageHelperResult.getDocumentResult().getDocBackLivenessResponse()`
 - Face similarity `imageHelperResult.getDocumentResult().getFaceSimilarity()`
 - Glare in front document image `imageHelperResult.getDocumentResult().isGlareInFront()`
 - Glare in back document image `imageHelperResult.getDocumentResult().isGlareInBack()`
