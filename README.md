@@ -1,6 +1,13 @@
-# inImageHelperAdvance
+# All In One SDK
 
-Helps organisations to collect pictures of customerID cards &amp; Selfies in a more secure &amp; friendly manner. It is accompanied by sanity check methods, quality of picture assistance, liveness detection of selfies and customerID cards, face match between selfie and customerID cards &amp; official database verification of ID cards with ID images as well as with ID number.
+This SDK has the following capabilities (all/any of them can be used by passing the valid parameters):
+- It helps end users click selfies and conducts a passive liveness check
+- It helps end users click clear pictures of ID documents and conducts passive liveness checks of the same
+- It conducts OCR on documents to extract text
+- It matches faces between documents and other documents/selfies
+- It conducts official database checks for documents using the document numbers (along with DOB in case of DL)
+
+Additionally, you can choose to turn on ‘strict mode’, which prevents the user from proceeding to the next step if the previous one is unsuccessful (applicable on select services)
 
 ## Minimum Requirements
 
