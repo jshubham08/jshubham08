@@ -1,6 +1,6 @@
 # inImageHelperAdvance
 
-Helps organisations to collect pictures of customerID cards &amp; Selfies in a more secure &amp; friendly manner. It is accompanied by sanity check methods, quality of picture assistance, liveness detection, face match between selfie and customerID cards &amp; official database verification of ID cards with ID images as well as with ID number.
+Helps organisations to collect pictures of customerID cards &amp; Selfies in a more secure &amp; friendly manner. It is accompanied by sanity check methods, quality of picture assistance, liveness detection of selfies and customerID cards, face match between selfie and customerID cards &amp; official database verification of ID cards with ID images as well as with ID number.
 
 ## Minimum Requirements
 
